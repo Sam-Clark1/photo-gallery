@@ -12,7 +12,9 @@ const categories = [
       description: "Fields, farmhouses, waterfalls, and the beauty of nature",
     },
   ];
-
+  function categorySelected(name) {
+    console.log(`${name} clicked`)
+  }
 function Nav() {
     return (
         <header>
@@ -36,7 +38,7 @@ function Nav() {
                 className="mx-1"
                 key={category.name}
             >
-                <span onClick={categorySelected} >
+                <span onClick={() => categorySelected(category.name)} >
                 {category.name}
                 </span>
             </li>
